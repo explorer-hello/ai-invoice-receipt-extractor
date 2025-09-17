@@ -1,21 +1,28 @@
 # AI Invoice & Receipt Extractor
 
-## 📌 Overview
-An AI-powered system that extracts structured data (vendor, amount, date, taxes) from invoices and receipts (PDF/JPEG).  
-Built with **.NET Core, MySQL, OCR (Tesseract), and NLP**.
+=======
+A Python-based application that extracts structured data from invoices and receipts using OCR and NLP.
 
-## 🚀 Features
-- Upload invoices/receipts → extract fields automatically
-- Categorizes expenses (Food, Travel, Utilities)
-- Export results to Excel/Google Sheets
-- Dashboard for search, filters, and spend analytics
+## Features
 
-## 🛠️ Tech Stack
-- Backend: .NET Core Web API (C#)
-- OCR: Tesseract
-- NLP: ML.NET / spaCy
-- Database: MySQL
-- Frontend: ASP.NET Razor Pages / React
+- Upload PDF/JPEG/PNG invoices and receipts
+- Extract text using Tesseract OCR
+- Parse structured data (vendor, date, amount, etc.) using spaCy NLP
+- Categorize expenses automatically
+- Store data in MySQL database
+- Dashboard for viewing and analytics
 
-## 📊 Project Status 
-🔹 Core development in progress 
+## Setup Instructions
+
+1. **Install dependencies**:
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+
+
+2. **Setup MySQL database**:
+- Install MySQL on your system
+- Create a database named `invoice_extractor`
+- Update the database credentials in `.env` file
+
+3. **Configure environment variables**:
+Create a `.env` file in the root directory:
